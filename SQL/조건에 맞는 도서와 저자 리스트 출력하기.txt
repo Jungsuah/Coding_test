@@ -1,0 +1,6 @@
+-- 조건에 맞는 도서와 저자 리스트 출력하기
+select b.BOOK_ID,a.AUTHOR_NAME,	to_char(b.PUBLISHED_DATE,'yyyy-mm-dd')as PUBLISHED_DATE
+from book b , author a
+where b.AUTHOR_ID = a.AUTHOR_ID
+and category = '경제'
+order by PUBLISHED_DATE asc;
